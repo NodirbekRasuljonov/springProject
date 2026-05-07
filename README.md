@@ -7,3 +7,5 @@ added get method
 <img width="1440" height="900" alt="Screenshot 2026-05-07 at 18 19 51" src="https://github.com/user-attachments/assets/0257ca0b-7e0c-4993-a290-65126c674eec" />
 
 added excaption handling <img width="1440" height="900" alt="Screenshot 2026-05-07 at 19 03 05" src="https://github.com/user-attachments/assets/f2620b9b-a018-4c3e-ae9a-430b5f839d11" />
+
+added put method<img width="1440" height="900" alt="Screenshot 2026-05-07 at 19 35 08" src="https://github.com/user-attachments/assets/337aef61-9ded-4c02-95d8-b077146abb55" />
