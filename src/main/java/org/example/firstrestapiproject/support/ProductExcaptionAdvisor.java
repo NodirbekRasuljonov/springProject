@@ -3,13 +3,12 @@ package org.example.firstrestapiproject.support;
 import org.example.firstrestapiproject.support.excaption.ProductNotFoundExcaption;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springdoc.api.ErrorMessage;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import shared.response.ErrorMessageResponse;
+import shared.response.api.ErrorMessageResponse;
 
 
 

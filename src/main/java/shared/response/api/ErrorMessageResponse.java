@@ -1,4 +1,4 @@
-package shared.response;
+package shared.response.api;
 
 public class ErrorMessageResponse {
     private String message;

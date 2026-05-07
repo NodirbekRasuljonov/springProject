@@ -19,10 +19,17 @@ public class ProductRepository {
     }
 
     private Product setId(Product entity){
-        entity.setId(counter);
-        map.put(counter,entity);
-        counter++;
+        if(entity.getId()==null){
+            map.put(entity.getId(),entity);
+
+        }else{
+            entity.setId(counter);
+            map.put(counter,entity);
+            counter++;
+
+        }
         return entity;
+
     }
 
     public Optional<Product> findByID(Long id){

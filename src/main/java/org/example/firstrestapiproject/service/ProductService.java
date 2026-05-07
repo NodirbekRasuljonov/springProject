@@ -1,4 +1,5 @@
 package org.example.firstrestapiproject.service;
+import org.example.firstrestapiproject.api.request.UpdateProductRequest;
 import org.example.firstrestapiproject.support.ProductExcaptionSupplier;
 import org.springframework.stereotype.Service;
 import org.example.firstrestapiproject.repository.ProductRepository;
@@ -24,6 +25,11 @@ public class ProductService {
 
     public ProductResponse find(Long id){
         Product product=productRepository.findByID(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
+        return productMapper.toProductResponse(product);
+    }
+    public ProductResponse updateProduct(Long id, UpdateProductRequest updateProductRequest){
+        Product product=productRepository.findByID(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
+        productRepository.save(productMapper.toProduct(product, updateProductRequest));
         return productMapper.toProductResponse(product);
     }
 
