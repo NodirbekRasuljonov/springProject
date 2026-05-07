@@ -1,9 +1,7 @@
 package org.example.firstrestapiproject.repository;
 
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import org.springframework.stereotype.Repository;
 import org.example.firstrestapiproject.domain.Product;
@@ -35,6 +33,15 @@ public class ProductRepository {
     public Optional<Product> findByID(Long id){
         return Optional.ofNullable(map.get(id));
     }
+
+
+    public List<Product> findAll(){
+        return new ArrayList<>(map.values());
+    }
+    public  void deleteById(Long id){
+        map.remove(id);
+    }
+
 
 
 

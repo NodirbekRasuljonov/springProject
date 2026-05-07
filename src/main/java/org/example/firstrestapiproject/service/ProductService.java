@@ -8,6 +8,9 @@ import org.example.firstrestapiproject.api.response.ProductResponse;
 import org.example.firstrestapiproject.domain.Product;
 import org.example.firstrestapiproject.support.ProductMapper;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -33,6 +36,13 @@ public class ProductService {
         return productMapper.toProductResponse(product);
     }
 
+    public List<ProductResponse> findAll(){
+        return productRepository.findAll().stream().map(productMapper::toProductResponse).collect(Collectors.toList());
 
+    }
 
+    public void delete(Long id){
+        Product product=productRepository.findByID(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
+        productRepository.deleteById(product.getId());
+    }
 }
