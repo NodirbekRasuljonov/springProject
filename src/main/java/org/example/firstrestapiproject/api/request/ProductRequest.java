@@ -5,8 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProductRequest {
 
     private final String name;
+
     @JsonCreator
-    public ProductRequest(String name) {
+    public ProductRequest(@JsonProperty("name") String name) {
         this.name=name;
     }
 
