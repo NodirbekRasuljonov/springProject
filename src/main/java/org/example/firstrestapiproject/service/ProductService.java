@@ -1,4 +1,5 @@
 package org.example.firstrestapiproject.service;
+import org.example.firstrestapiproject.support.ProductExcaptionSupplier;
 import org.springframework.stereotype.Service;
 import org.example.firstrestapiproject.repository.ProductRepository;
 import org.example.firstrestapiproject.api.request.ProductRequest;
@@ -22,7 +23,7 @@ public class ProductService {
     }
 
     public ProductResponse find(Long id){
-        Product product=productRepository.findByID(id).orElseThrow(RuntimeException::new);
+        Product product=productRepository.findByID(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
         return productMapper.toProductResponse(product);
     }
 
