@@ -9,3 +9,5 @@ added get method
 added excaption handling <img width="1440" height="900" alt="Screenshot 2026-05-07 at 19 03 05" src="https://github.com/user-attachments/assets/f2620b9b-a018-4c3e-ae9a-430b5f839d11" />
 
 added put method<img width="1440" height="900" alt="Screenshot 2026-05-07 at 19 35 08" src="https://github.com/user-attachments/assets/337aef61-9ded-4c02-95d8-b077146abb55" />
+added delete method
+<img width="1440" height="900" alt="Screenshot 2026-05-07 at 20 55 09" src="https://github.com/user-attachments/assets/46a45473-7b27-4865-aa12-411a4b984687" />
