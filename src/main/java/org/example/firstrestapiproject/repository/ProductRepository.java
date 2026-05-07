@@ -3,11 +3,21 @@ package org.example.firstrestapiproject.repository;
 
 import java.util.*;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.example.firstrestapiproject.domain.Product;
 
 @Repository
 
+public interface ProductRepository extends JpaRepository<Product, Long> {
+
+}
+
+
+
+
+
+/*
 public class ProductRepository {
     protected final Map<Long,Product> map = new HashMap<>();
     protected long counter=1;
@@ -46,3 +56,4 @@ public class ProductRepository {
 
 
 }
+*/

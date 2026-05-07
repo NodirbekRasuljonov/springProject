@@ -27,11 +27,11 @@ public class ProductService {
     }
 
     public ProductResponse find(Long id){
-        Product product=productRepository.findByID(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
+        Product product=productRepository.findById(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
         return productMapper.toProductResponse(product);
     }
     public ProductResponse updateProduct(Long id, UpdateProductRequest updateProductRequest){
-        Product product=productRepository.findByID(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
+        Product product=productRepository.findById(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
         productRepository.save(productMapper.toProduct(product, updateProductRequest));
         return productMapper.toProductResponse(product);
     }
@@ -42,7 +42,7 @@ public class ProductService {
     }
 
     public void delete(Long id){
-        Product product=productRepository.findByID(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
+        Product product=productRepository.findById(id).orElseThrow(ProductExcaptionSupplier.productNotFound(id));
         productRepository.deleteById(product.getId());
     }
 }
