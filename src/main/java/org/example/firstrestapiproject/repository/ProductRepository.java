@@ -3,6 +3,7 @@ package org.example.firstrestapiproject.repository;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 import org.example.firstrestapiproject.domain.Product;
@@ -22,6 +23,10 @@ public class ProductRepository {
         map.put(counter,entity);
         counter++;
         return entity;
+    }
+
+    public Optional<Product> findByID(Long id){
+        return Optional.ofNullable(map.get(id));
     }
 
 

@@ -21,6 +21,11 @@ public class ProductService {
         return productMapper.toProductResponse(product);
     }
 
+    public ProductResponse find(Long id){
+        Product product=productRepository.findByID(id).orElseThrow(RuntimeException::new);
+        return productMapper.toProductResponse(product);
+    }
+
 
 
 }
